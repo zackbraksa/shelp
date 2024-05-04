@@ -10,3 +10,8 @@ gem "rspec", "~> 3.0"
 
 gem "rubocop"
 gem "ruby-lsp"
+
+gem "clipboard"
+gem "ruby-openai"
+gem "thor"
+gem "tty-prompt"
