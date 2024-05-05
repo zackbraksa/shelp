@@ -59,6 +59,24 @@ GEM
       unicode-display_width (>= 2.4.0, < 3.0)
     rubocop-ast (1.31.3)
       parser (>= 3.3.1.0)
+    rubocop-capybara (2.20.0)
+      rubocop (~> 1.41)
+    rubocop-factory_bot (2.25.1)
+      rubocop (~> 1.41)
+    rubocop-performance (1.21.0)
+      rubocop (>= 1.48.1, < 2.0)
+      rubocop-ast (>= 1.31.1, < 2.0)
+    rubocop-rake (0.6.0)
+      rubocop (~> 1.0)
+    rubocop-rspec (2.29.2)
+      rubocop (~> 1.40)
+      rubocop-capybara (~> 2.17)
+      rubocop-factory_bot (~> 2.22)
+      rubocop-rspec_rails (~> 2.28)
+    rubocop-rspec_rails (2.28.3)
+      rubocop (~> 1.40)
+    rubocop-shopify (2.15.1)
+      rubocop (~> 1.51)
     ruby-lsp (0.16.6)
       language_server-protocol (~> 3.17.0)
       prism (>= 0.23.0, < 0.28)
@@ -93,6 +111,10 @@ DEPENDENCIES
   rake (~> 13.0)
   rspec (~> 3.0)
   rubocop
+  rubocop-performance
+  rubocop-rake
+  rubocop-rspec
+  rubocop-shopify
   ruby-lsp
   ruby-openai
   shelp!
