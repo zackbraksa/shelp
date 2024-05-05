@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.authors = ["Zack Braksa"]
   spec.email = ["zakaria.braksa@gmail.com"]
 
-  spec.summary = "Ask for help in your terminal."
-  spec.description = "Ask about shell commands in your terminal using natural language."
-  spec.homepage = "https://zackbraksa.com/shelp"
+  spec.summary = "Translate natural language to shell commands."
+  spec.description = "A command-line tool that translates natural language to shell commands using OpenAI's GPT model."
+  spec.homepage = "https://zackbraksa.com"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.0.0"
 
