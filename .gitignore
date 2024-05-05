@@ -12,3 +12,6 @@
 
 # env file
 .env
+
+# vscode settings
+.vscode
