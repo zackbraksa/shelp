@@ -25,7 +25,7 @@ export OPENAI_API_KEY=your-api-key
 Then you can run the CLI by executing:
 
 ```bash
-shelp ask "How do I list files in a directory?"
+shelp ask "How do I exclude files from a zip archive?"
 ```
 
 ## Development
