@@ -11,8 +11,8 @@ module Shelp
     desc "ask", "Translates natural language queries into shell commands using the OpenAI API"
     def ask(query)
       client = OpenAI::Client.new(
-        access_token: ENV['OPENAI_ACCESS_TOKEN'],
-        log_errors: true # Highly recommended in development, so you can see what errors OpenAI is returning. Not recommended in production.
+        access_token: ENV["OPENAI_ACCESS_TOKEN"],
+        log_errors: true, # Disable in production
       )
 
       # Define the search prompt
@@ -22,22 +22,26 @@ module Shelp
         If a user asks a question unrelated to Linux/Unix system administration, politely respond with "I'm currently focused on Linux/Unix system administration tasks. Can I help you with file management, system monitoring, or troubleshooting?"
         Always format your response in JSON format with the following structure: { "response": ["ANSWER 1", "ANSWER 2", "ANSWER 3"] }
 
-
         Generate shell commands based on the following query: #{query}
+      TEXT
 
+      system_prompt = <<~TEXT
+        "You are a chatbot that assists with Linux/Unix system administration tasks. Provide shell commands to help users with file management, system monitoring, and basic troubleshooting."
       TEXT
 
       # Call the OpenAI API
       chat_response = client.chat(
         parameters: {
-          model: "gpt-3.5-turbo-0125", # Required.
+          model: "gpt-3.5-turbo-0125",
           messages: [
-            { role: "system",
-              content: "You are a chatbot that assists with Linux/Unix system administration tasks. Provide shell commands to help users with file management, system monitoring, and basic troubleshooting." },
-            { role: "user", content: chat_prompt }
+            {
+              role: "system",
+              content: system_prompt,
+            },
+            { role: "user", content: chat_prompt },
           ],
-          temperature: 0.7
-        }
+          temperature: 0.7,
+        },
       )
 
       # Extract the chat response
