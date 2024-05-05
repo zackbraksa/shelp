@@ -1,4 +1,4 @@
-# Shelp
+# shelp
 
 A command line tool that translates natural language into shell commands, using OpenAI's GPT models.
 
