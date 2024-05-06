@@ -2,6 +2,8 @@
 
 [![Gem Version](https://badge.fury.io/rb/shelp.svg)](https://badge.fury.io/rb/shelp)
 
+![example workflow](https://github.com/zackbraksa/shelp/actions/workflows/main.yml/badge.svg)
+
 A command line tool that translates natural language into shell commands, using OpenAI's GPT models.
 
 **DISCLAIMER**: This is work in progress and might be rough around the edges. Please be patient and report any issues you encounter.
